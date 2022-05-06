@@ -78,7 +78,7 @@ h2{
     font-size: 24px;
     text-align: center;
     color: white;
-    font-family: Helvetica;
+    font-family: sans-serif;
     margin-bottom: 12px;
 }
 
@@ -86,7 +86,7 @@ h2{
     text-align: justify;
     font-size: 17px;
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 12px;
 }
 
@@ -95,40 +95,23 @@ h2{
 }
 
 .productionContainer{
-    position: relative;
+    background: linear-gradient(to right, #e60000 0%, #990000 100%);
+    display: grid;
+    column-gap: 30px;
+    row-gap: 25px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     left: 50%;
+    margin-top: 2px;
+    min-height: 700px;
+    padding: 2%;
+    position: relative;
     transform: translateX(-50%);
     width: 94%;
-    padding: 2%;
-    height: 700px;
-    background: linear-gradient(to right, #e60000 0%, #990000 100%);
-    margin-top: 2px;
 }
 
-ul{
-    list-style: none;
-    text-align: center;
-    height: 100%;
-
-}
-
-li{
-    position: relative;
-    float: left;
+.background{
     background-color: rgba(0, 0, 20, 0.4);
-    width: 32%;
-    height: 48%;
-    margin-right: 2%; 
-}
-
-.li3{
-    margin-right: 0;  
-}
-
-
-.liLow{
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 
 .img{
@@ -140,6 +123,7 @@ li{
     height: 95%;
     background-size: cover;
     background-position: center;
+    background-color: rgba(0, 0, 20, 0.4);
     
     transition-duration: calc(var(--transition-duration) / 5);
 }
@@ -239,7 +223,7 @@ footer{
     background: #990000;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     h1{
         font-size: 25px;
     }
@@ -249,7 +233,24 @@ footer{
         height: 30px;
     }
 
+    .productionContainer{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 10px;
+        row-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 481px) {
     .introductionContainer{
         top: calc(55% + 2px);
+    }
+
+    .informContainer{
+        max-width: 120px;
+    }
+
+    .inform{
+        font-size: 13px;
     }
 }
