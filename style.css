@@ -56,7 +56,7 @@ main{
     left: 50%;
     transform: translateX(-50%);
     width: 97%;
-    height: 900px;
+    height: 800px;
     background-image: url("images/background_vineyard.jpg");
     background-size: cover;
     padding: 3px;
@@ -71,7 +71,7 @@ main{
     box-sizing: border-box;
     background-color: #99000089;
     padding: 10px;
-    top: calc(65% + 2px);
+    top: calc(60% + 2px);
 }
 
 h2{
@@ -88,6 +88,24 @@ h2{
     color: white;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 12px;
+}
+
+.only-mobile{
+    background-color: #99000089;
+    box-sizing: border-box;
+    left: -50%;
+    padding: 10px;
+    position: relative;;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 220px;
+}
+
+.mobile-text{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .m0{
@@ -243,7 +261,11 @@ footer{
 
 @media screen and (max-width: 481px) {
     .introductionContainer{
-        top: calc(55% + 2px);
+        top: 0;
+    }
+
+    .only-mobile{
+        left: 50%;
     }
 
     .informContainer{
@@ -253,4 +275,5 @@ footer{
     .inform{
         font-size: 13px;
     }
+
 }
