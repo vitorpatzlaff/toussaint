@@ -7,6 +7,11 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "Geometr415 Blk BT";
+    src: url(fonts/Geometr415\ Blk\ BT\ Black.ttf);
+}
+
 
 body{
     background-color: #000000;
@@ -32,13 +37,16 @@ h1{
 }
 
 .old_wine{
-    height: 60px;
     float: left;
+}
+
+.old_wine, 
+.old_wine_reflected{
+    height: 60px;
 }
 
 
 .old_wine_reflected{
-    height: 60px;
     transform: rotateY(180deg);
     float: right;
 }
@@ -63,7 +71,7 @@ main{
     box-sizing: border-box;
     background-color: #99000089;
     padding: 10px;
-    bottom: calc(-65% - 2px);
+    top: calc(65% + 2px);
 }
 
 h2{
@@ -207,12 +215,6 @@ footer{
     margin-top: 2px;    
 }
 
-h3{
-    font-family: "Geometr415 Blk BT", Helvetica, sans-serif;
-    color:white;
-    font-size: 50px;
-}
-
 .footerA{
     transform: rotateY(180deg);
 }
@@ -235,4 +237,19 @@ h3{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #990000;
+}
+
+@media screen and (max-width: 700px) {
+    h1{
+        font-size: 25px;
+    }
+
+    .old_wine, 
+    .old_wine_reflected{
+        height: 30px;
+    }
+
+    .introductionContainer{
+        top: calc(55% + 2px);
+    }
 }
